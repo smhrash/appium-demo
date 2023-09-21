@@ -25,7 +25,8 @@ public class BaseTest {
     @BeforeClass
     public void configureAppium() {
         String appiumLogPath = "./appium.log";
-        String appiumJSPath = "C:\\Users\\sarkerm.rashid\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
+        //String appiumJSPath = "C:\\Users\\sarkerm.rashid\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
+        String appiumJSPath = "//Users//smhrash//node_modules//appium//build//lib//main.js";
 
         // Define the AppiumServiceBuilder with the desired configuration
         AppiumServiceBuilder builder = new AppiumServiceBuilder()
@@ -44,9 +45,10 @@ public class BaseTest {
 
             UiAutomator2Options options = new UiAutomator2Options();
             options.setDeviceName("JovanEmulator");
-            options.setChromedriverExecutable("C:\\Users\\sarkerm.rashid\\Documents\\chromedriver_win32");
+            //options.setChromedriverExecutable("C:\\Users\\sarkerm.rashid\\Documents\\chromedriver_win32");
             //options.setApp("C:\\Users\\sarkerm.rashid\\IdeaProjects\\appium-demo\\src\\test\\java\\com\\perficient\\rosources\\ApiDemos-debug.apk");
-            options.setApp("C:\\Users\\sarkerm.rashid\\IdeaProjects\\appium-demo\\src\\test\\java\\com\\perficient\\rosources\\General-Store.apk");
+            //options.setApp("C:\\Users\\sarkerm.rashid\\IdeaProjects\\appium-demo\\src\\test\\java\\com\\perficient\\rosources\\General-Store.apk");
+            options.setApp("/Users/smhrash/IdeaProjects/appium-demo/src/test/java/com/perficient/rosources/General-Store.apk");
             // Initialize AndroidDriver
             driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
